@@ -12,5 +12,9 @@
     nixfmt-rfc-style
     jq
     ruff
+
+    # Toolchains
+    rustup
+    gcc
   ];
 }
