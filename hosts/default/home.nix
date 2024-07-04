@@ -78,10 +78,12 @@
   #
   #  /etc/profiles/per-user/nitro/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
+  systemd.user.sessionVariables = {
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
   };
+
+  home.sessionPath = [ "$HOME/.cargo/bin" ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

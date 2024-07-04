@@ -13,8 +13,6 @@
     jq
     ruff
 
-    # Toolchains
-    rustup
-    gcc
+    direnv
   ];
 }

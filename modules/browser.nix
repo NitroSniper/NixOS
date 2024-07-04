@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ floorp ];
+  home.packages = with pkgs; [
+    floorp
+    ungoogled-chromium
+  ];
 }

@@ -112,7 +112,6 @@
   #   EDITOR = "nvim";
   # };
 
-
   programs.hyprlock = {
     enable = true;
   };
