@@ -31,6 +31,8 @@
   home.packages = with pkgs; [
     foliate
     hyprshot
+    obs-studio
+    swaybg
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

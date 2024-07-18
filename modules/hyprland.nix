@@ -18,6 +18,11 @@
       "$menu" = "rofi -show drun";
       "$browser" = "librewolf";
 
+      exec-once = [
+        "swaybg -i ~/Pictures/background/BlueLake.png"
+        "waybar"
+      ];
+
       ################
       ### MONITORS ###
       ################
