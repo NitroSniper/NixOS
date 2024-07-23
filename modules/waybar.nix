@@ -79,6 +79,7 @@
         network = {
           tooltip = true;
           format-wifi = "{icon} {essid}";
+          format-disconnect = "{icon}  saldkfj {essid}";
           format-icons = [
             "󰤯 "
             "󰤟 "
@@ -111,7 +112,7 @@
           spacing = 5;
         };
         battery = {
-          interval = 1;
+          interval = 5;
           tooltip = false;
           format = "{icon} {capacity}%";
           format-charging = "󱐋 {capacity}%";
@@ -149,7 +150,7 @@
         "custom/LToD-L-Arrow" = {
           format = "";
           tooltip = false;
-        };
+        }
         "custom/DToBG-L-Arrow" = {
           format = "";
           tooltip = false;
@@ -221,7 +222,7 @@
       }
 
           
-      #battery.warning:not(.charging) {
+      #battery.critical:not(.charging) {
           animation-name: blink;
           animation-duration: 0.5s;
           animation-timing-function: steps(12);
