@@ -150,7 +150,7 @@
         "custom/LToD-L-Arrow" = {
           format = "";
           tooltip = false;
-        }
+        };
         "custom/DToBG-L-Arrow" = {
           format = "";
           tooltip = false;

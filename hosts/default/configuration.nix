@@ -21,6 +21,15 @@
     "flakes"
   ];
 
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -95,6 +104,7 @@
       "wheel"
       "audio"
       "video"
+      "docker"
     ];
     packages = with pkgs; [ ];
   };
@@ -143,6 +153,8 @@
     kitty
     hyprpaper
     vivaldi
+    podman-tui
+    podman-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
