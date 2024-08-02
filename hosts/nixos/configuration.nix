@@ -23,10 +23,12 @@
 
   virtualisation = {
     containers.enable = true;
-    podman = {
+    docker = {
       enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
   };
 
@@ -74,7 +76,6 @@
   services.blueman.enable = true;
 
   # Enable Audio
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -127,7 +128,7 @@
   };
 
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
     nvidia.modesetting.enable = true;
   };
 
@@ -153,8 +154,6 @@
     kitty
     hyprpaper
     vivaldi
-    podman-tui
-    podman-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -18,9 +18,6 @@
   home.packages = with pkgs; [
     # Formatters
     nixfmt-rfc-style
-    jq
-    ruff
-
-    direnv
+    nixd
   ];
 }
