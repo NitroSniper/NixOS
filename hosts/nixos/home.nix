@@ -18,6 +18,7 @@
   imports = [
     ../../modules/neovim.nix
     ../../modules/hyprland.nix
+    ../../modules/hyprlock.nix
     ../../modules/browser.nix
     ../../modules/discord.nix
     ../../modules/terminal.nix
