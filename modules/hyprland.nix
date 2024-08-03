@@ -111,10 +111,6 @@
         preserve_split = true; # You probably want this
       };
 
-      master = {
-        new_is_master = true;
-      };
-
       misc = {
         force_default_wallpaper = -1;
         # Set to 0 or 1 to disable the anime mascot wallpapers
@@ -165,7 +161,10 @@
         ", XF86MonBrightnessUp, exec, brillo -q -A 1"
         ", XF86MonBrightnessDown, exec, brillo -q -U 1"
       ];
-      bindl = ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+      bindl = [
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", switch:Lid Switch, exec, hyprlock"
+      ];
 
       bind = [
         # Performance

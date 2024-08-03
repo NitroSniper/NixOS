@@ -14,7 +14,7 @@
     { self, nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
+        default = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
           };
