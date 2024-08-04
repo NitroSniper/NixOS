@@ -21,6 +21,7 @@
     "flakes"
   ];
 
+  # Needed here since it changes the kernal stuff or something.
   virtualisation = {
     containers.enable = true;
     docker = {
@@ -107,7 +108,6 @@
       "video"
       "docker"
     ];
-    packages = with pkgs; [ ];
   };
 
   home-manager = {
@@ -122,10 +122,6 @@
   # environment.sessionVariables = {
   #   EDITOR = "nvim";
   # };
-
-  programs.hyprlock = {
-    enable = true;
-  };
 
   hardware = {
     graphics.enable = true;
@@ -148,13 +144,6 @@
   # $ nix search wget
 
   fonts.packages = with pkgs; [ nerdfonts ];
-
-  environment.systemPackages = with pkgs; [
-    cliphist
-    kitty
-    hyprpaper
-    vivaldi
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

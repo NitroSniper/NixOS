@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -25,15 +25,21 @@
     ../../modules/devtools.nix
     ../../modules/rofi.nix
     ../../modules/waybar.nix
+    ../../modules/swaybar.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     foliate
     hyprshot
     obs-studio
-    swaybg
+    ticktick
+
+    cliphist
+    kitty
+    vivaldi
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
