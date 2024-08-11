@@ -13,7 +13,7 @@ let
 
     # If you quit Neovim via 
     if [ "$?" -ne 0 ]; then
-      echo "Cancelling rebuild"
+      echo Cancelling rebuild
       exit 1
     fi
 
@@ -28,7 +28,6 @@ let
       nixfmt --quiet . || ( nixfmt . ; echo "formatting failed!" && exit 1)
     fi
 
-
     echo "NixOS Rebuilding... with Flake Option: ${flake-target}"
 
     # Rebuild, output simplified errors, log trackebacks
@@ -38,7 +37,7 @@ let
     git commit -am "$current"
 
     popd
-    hyprctl notify 5 5000 00000000 New NixOS config has been rebuilt successfully!
+    hyprctl notify -q 5 5000 00000000 New NixOS config has been rebuilt successfully!
   '';
 in
 {
