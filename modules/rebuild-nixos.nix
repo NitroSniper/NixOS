@@ -16,7 +16,7 @@ let
       echo "Cancelling rebuild step" && exit 1
     fi
 
-    if git diff --quiet '*.nix'; then
+    if git diff --quiet .; then
       echo "No changes detected, exiting." && exit 0
     fi
 
