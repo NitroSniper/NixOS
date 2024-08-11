@@ -8,12 +8,10 @@ let
     # cd to your config dir
     pushd ~/nixos/
 
-    # Edit your config
-    $EDITOR .
 
-    # If you quit Neovim via 
-    if [ "$?" -ne 0 ]; then
-      echo "Cancelling rebuild"
+    # Edit your config and If you quit Neovim via :cq then it won't rebuild
+    if [ $EDITOR . -ne 0 ]; then
+      echo "Cancelling rebuild step..."
       exit 1
     fi
 
@@ -23,7 +21,7 @@ let
     # Add any files not tracked by git
     git add *
 
-    if nixfmt --check --quiet .; then
+    if [ nixfmt --check --quiet . -ne 0]; then
       echo "Nix files not formatted. Formatting now..."
       nixfmt --quiet . || ( nixfmt . ; echo "formatting failed!" && exit 1)
     fi
