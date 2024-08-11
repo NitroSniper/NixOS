@@ -32,6 +32,22 @@
       };
     };
   };
+  # Power saving on laptop
+  services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "powersave";
+      turbo = "never";
+      # governor = "performance";
+      # turbo = "auto";
+    };
+  };
+  powerManagement.powertop.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -123,9 +139,15 @@
   #   EDITOR = "nvim";
   # };
 
+  # Load nvidia driver for Xorg and Wayland
+  # services.xserver.videoDrivers = [ "nvidia" ];
   hardware = {
     graphics.enable = true;
-    nvidia.modesetting.enable = true;
+    nvidia = {
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      open = false;
+    };
   };
 
   # Configure keymap in X11

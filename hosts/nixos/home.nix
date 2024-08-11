@@ -26,6 +26,8 @@
     ../../modules/rofi.nix
     ../../modules/waybar.nix
     ../../modules/swaybar.nix
+    ../../modules/kitty.nix
+    ../../modules/rebuild-nixos.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -36,9 +38,9 @@
     hyprshot
     obs-studio
     ticktick
+    google-chrome
 
     cliphist
-    kitty
     vivaldi
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -74,7 +76,7 @@
   };
 
   # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
+  # home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
   # through Home Manager then you have to manually source 'hm-session-vars.sh'
   # located at either
@@ -90,11 +92,8 @@
   #  /etc/profiles/per-user/nitro/etc/profile.d/hm-session-vars.sh
   #
   systemd.user.sessionVariables = {
-    EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
   };
-
-  home.sessionPath = [ "$HOME/.cargo/bin" ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
