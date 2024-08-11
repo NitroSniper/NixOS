@@ -13,7 +13,7 @@ let
 
     # If you quit Neovim via 
     if [ "$?" -ne 0 ]; then
-      echo Cancelling rebuild
+      echo "Cancelling rebuild"
       exit 1
     fi
 
