@@ -38,10 +38,8 @@
     hyprshot
     obs-studio
     ticktick
-    google-chrome
 
     cliphist
-    vivaldi
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

@@ -14,11 +14,12 @@
       # See https://wiki.hyprland.org/Configuring/Keywords/
       # Set application defaults
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "yazi";
       "$menu" = "rofi -show drun";
-      "$browser" = "librewolf";
+      "$browser" = "vivaldi";
 
       exec-once = [
+        "hyprlock --immediate-render"
         "swaybg -i ~/Pictures/background/BlueLake.png"
         "waybar"
       ];

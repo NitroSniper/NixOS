@@ -102,17 +102,6 @@
     pulse.enable = true;
   };
 
-  services.greetd = {
-    enable = true;
-    settings = rec {
-      initial_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland";
-        user = "nitro";
-      };
-      default_session = initial_session;
-    };
-  };
-
   # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.nitro = {
     isNormalUser = true;
@@ -124,6 +113,18 @@
       "video"
       "docker"
     ];
+  };
+
+  # Auto login to hyprland
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "${pkgs.hyprland}/bin/Hyprland";
+        user = "nitro";
+      };
+      default_session = initial_session;
+    };
   };
 
   home-manager = {
