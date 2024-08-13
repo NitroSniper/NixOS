@@ -18,7 +18,6 @@
       display-window = " Windows";
       drun-display-format = "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
       window-format = "{w} · {c} · {t}";
-      kb-cancel = "Escape,!Super_L";
     };
     theme =
       let

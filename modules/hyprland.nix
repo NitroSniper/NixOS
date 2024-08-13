@@ -15,7 +15,7 @@
       # Set application defaults
       "$terminal" = "kitty";
       "$fileManager" = "yazi";
-      "$menu" = "rofi -show drun";
+      "$menu" = "rofi";
       "$browser" = "vivaldi";
 
       exec-once = [
@@ -238,7 +238,7 @@
 
       ];
 
-      bindr = [ "$mod, $mod_L, exec, $menu" ];
+      bindr = [ "$mod, $mod_L, exec, pkill $menu || $menu -show drun" ];
 
       bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
