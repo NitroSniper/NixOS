@@ -28,6 +28,7 @@
     ../../modules/swaybar.nix
     ../../modules/kitty.nix
     ../../modules/rebuild-nixos.nix
+    ../../modules/yazi.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
