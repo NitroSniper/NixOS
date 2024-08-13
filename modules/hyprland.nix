@@ -178,7 +178,7 @@
         "$mod, F1, exec, hyprland-gamemode"
 
         # Utility
-        "$mod SHIFT, L, exec, hyprlock"
+        "$mod SHIFT, Q, exec, hyprlock"
         "$mod SHIFT, P, pin, active"
 
         # Display
