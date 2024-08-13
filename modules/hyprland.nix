@@ -161,6 +161,12 @@
         # Brightness
         ", XF86MonBrightnessUp, exec, brillo -q -A 1"
         ", XF86MonBrightnessDown, exec, brillo -q -U 1"
+
+        # Resize active with mod + shift + hjkl
+        "$mod SHIFT, H, resizeactive, -2 0"
+        "$mod SHIFT, L, resizeactive, 2 0"
+        "$mod SHIFT, K, resizeactive, 0 -2"
+        "$mod SHIFT, J, resizeactive, 0 2"
       ];
       bindl = [
         # Mute Audio toggle
@@ -197,12 +203,6 @@
         "$mod, L, movefocus, r"
         "$mod, K, movefocus, u"
         "$mod, J, movefocus, d"
-
-        # Resize active with mod + shift + hjkl
-        "$mod SHIFT, H, resizeactive, -10 0"
-        "$mod SHIFT, L, resizeactive, 10 0"
-        "$mod SHIFT, K, resizeactive, 0 -10"
-        "$mod SHIFT, J, resizeactive, 0 10"
 
         # Switch workspaces with mainMod + [0-9]
         "$mod, 1, workspace, 1"
