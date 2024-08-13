@@ -163,10 +163,10 @@
         ", XF86MonBrightnessDown, exec, brillo -q -U 1"
 
         # Resize active with mod + shift + hjkl
-        "$mod SHIFT, H, resizeactive, -2 0"
-        "$mod SHIFT, L, resizeactive, 2 0"
-        "$mod SHIFT, K, resizeactive, 0 -2"
-        "$mod SHIFT, J, resizeactive, 0 2"
+        "$mod SHIFT, H, resizeactive, -10 0"
+        "$mod SHIFT, L, resizeactive, 10 0"
+        "$mod SHIFT, K, resizeactive, 0 -10"
+        "$mod SHIFT, J, resizeactive, 0 10"
       ];
       bindl = [
         # Mute Audio toggle
