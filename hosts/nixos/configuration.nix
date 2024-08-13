@@ -85,6 +85,8 @@
   # Enable Brightness
   hardware.brillo.enable = true;
 
+  # Enable player
+  services.playerctld.enable = true;
   # Enable Bluetooth
   hardware.bluetooth = {
     enable = true;

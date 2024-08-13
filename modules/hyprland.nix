@@ -163,7 +163,13 @@
         ", XF86MonBrightnessDown, exec, brillo -q -U 1"
       ];
       bindl = [
+        # Mute Audio toggle
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+        # Player for music and videos
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPrev, exec, playerctl previous"
         ", switch:Lid Switch, exec, hyprlock"
       ];
 
@@ -173,24 +179,30 @@
 
         # Utility
         "$mod SHIFT, L, exec, hyprlock"
+        "$mod SHIFT, P, pin, active"
 
         # Display
         "$mod, F, fullscreen, 0"
+        "$mod SHIFT, F, togglefloating,"
 
         "$mod SHIFT, return, exec, $terminal"
         "$mod, Q, killactive,"
         "$mod SHIFT ALT, Q, exit,"
         "$mod, E, exec, $fileManager"
-        "$mod, V, togglefloating,"
-        "$mod, R, exec, $menu"
         "$mod, P, pseudo, # dwindle"
         # bind = $mod, J, togglesplit, # dwindle
 
-        # Move focus with mod + arrow keys
+        # Move focus with mod + hjkl
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"
         "$mod, K, movefocus, u"
         "$mod, J, movefocus, d"
+
+        # Resize active with mod + shift + hjkl
+        "$mod SHIFT, H, resizeactive, -10 0"
+        "$mod SHIFT, L, resizeactive, 10 0"
+        "$mod SHIFT, K, resizeactive, 0 -10"
+        "$mod SHIFT, J, resizeactive, 0 10"
 
         # Switch workspaces with mainMod + [0-9]
         "$mod, 1, workspace, 1"
@@ -224,20 +236,14 @@
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
 
-        # Utility Keybind
-        "$mod SHIFT, P, pin, active"
       ];
+
+      bindr = [ "$mod, $mod_L, exec, $menu" ];
 
       bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
-      ];
-
-      windowrulev2 = [
-        "float, title:(Picture-in-Picture)"
-        "pin, title:(Picture-in-Picture)"
-        "noinitialfocus, title:(Picture-in-Picture)"
       ];
     };
   };
