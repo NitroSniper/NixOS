@@ -170,6 +170,18 @@
 
   fonts.packages = with pkgs; [ nerdfonts ];
 
+  # Storage Optimisations
+  nix.optimise = {
+    automatic = true;
+    dates = [ "18:00" ];
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 14d";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
