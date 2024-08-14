@@ -195,6 +195,8 @@
         "$mod, Q, killactive,"
         "$mod SHIFT ALT, Q, exit,"
         "$mod, E, exec, $fileManager"
+
+        "$mod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
         "$mod, P, pseudo, # dwindle"
         # bind = $mod, J, togglesplit, # dwindle
 
@@ -227,10 +229,6 @@
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
-
-        # Example special workspace (scratchpad)
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod SHIFT, S, movetoworkspace, special:magic"
 
         # Scroll through existing workspaces with mod + scroll
         "$mod, mouse_down, workspace, e+1"
