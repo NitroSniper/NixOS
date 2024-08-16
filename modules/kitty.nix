@@ -10,5 +10,6 @@
       name = "Hack Nerd Font Mono Bold";
       size = 11;
     };
+    theme = "Glacier";
   };
 }
