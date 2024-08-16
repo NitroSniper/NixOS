@@ -53,7 +53,7 @@
         border_size = 2;
 
         # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.active_border" = "rgba(5277C3ee) rgba(7EB8E1ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
 
         # Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -182,6 +182,8 @@
       bind = [
         # Performance
         "$mod, F1, exec, hyprland-gamemode"
+        "$mod, F2, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
+        "$mod, F3, exec, ${pkgs.hyprpicker}/bin/hyprpicker"
 
         # Utility
         "$mod SHIFT, Q, exec, hyprlock"
@@ -196,8 +198,7 @@
         "$mod SHIFT ALT, Q, exit,"
         "$mod, E, exec, $fileManager"
 
-        "$mod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
-        "$mod, P, pseudo, # dwindle"
+        # "$mod, P, pseudo, # dwindle"
         # bind = $mod, J, togglesplit, # dwindle
 
         # Move focus with mod + hjkl
@@ -243,6 +244,8 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
+
+      windowrulev2 = "opacity 0.9 0.7, class:(kitty)";
     };
   };
 }
