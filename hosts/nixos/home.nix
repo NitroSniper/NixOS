@@ -25,7 +25,7 @@
     ../../modules/devtools.nix
     ../../modules/rofi.nix
     ../../modules/waybar.nix
-    ../../modules/swaybar.nix
+    ../../modules/swaybg.nix
     ../../modules/kitty.nix
     ../../modules/rebuild-nixos.nix
     ../../modules/yazi.nix

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  flake-target = ".#default";
+  flake-target = "#default";
   config-location = "~/nixos/";
   rebuild-nix = pkgs.writeShellScriptBin "rebuild-nixos" ''
     # A rebuild script that commits on a successful build
@@ -39,7 +39,7 @@ let
 
     # Rebuild, output simplified errors, log trackebacks
     echo "NixOS Rebuilding... with Flake Option: ${flake-target}"
-    sudo nixos-rebuild switch --flake ${flake-target} |& tee nixos-switch.log
+    sudo nixos-rebuild switch --flake .${flake-target} |& tee nixos-switch.log
 
     # If rebuild fails, exit and don't commit code to git.
     if [ $PIPESTATUS -ne 0 ]; then
