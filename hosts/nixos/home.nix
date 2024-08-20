@@ -41,6 +41,9 @@
 
     # Wayland Clipboard
     wl-clipboard
+
+    distrobox
+    distrobox-tui
   ];
 
   systemd.user.sessionVariables = {
