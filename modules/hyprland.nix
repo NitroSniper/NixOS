@@ -4,7 +4,7 @@
   home.packages = [ (import ./hyprland-gamemode.nix { inherit pkgs; }) ];
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaDark;
-    name = "catppuccin-mocha-dark-cursors";
+    name = "mocha-dark";
     size = 24;
     gtk.enable = true;
     x11.enable = true;
@@ -46,6 +46,7 @@
       env = [
         "XCURSOR_SIZE, 24"
         "HYPRCURSOR_SIZE, 24"
+        "HYPRCURSOR_THEME, mocha-dark"
       ];
 
       #####################
