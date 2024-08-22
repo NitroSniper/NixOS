@@ -116,13 +116,18 @@
           tooltip = false;
           format = "{icon} {capacity}%";
           format-charging = "󱐋 {capacity}%";
+          format-full = "󱟢 {capacity}%";
           format-icons = {
             default = [
+              "󰂎"
+              "󰁺"
               "󰁻"
+              "󰁼"
               "󰁽"
+              "󰁾"
               "󰁿"
-              "󰂁"
-              "󰁹"
+              "󰂀"
+              "󰂂"
             ];
           };
           states = {

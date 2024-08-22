@@ -12,6 +12,7 @@
     # My own Dev Tooling
     nox = {
       url = "github:NitroSniper/nox";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
