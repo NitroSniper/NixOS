@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # My own Dev Tooling
+    nox = {
+      url = "github:NitroSniper/nox";
+    };
   };
 
   outputs =

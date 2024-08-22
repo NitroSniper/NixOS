@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -44,6 +44,9 @@
 
     distrobox
     distrobox-tui
+
+    # Nox
+    inputs.nox.packages."${system}".default
   ];
 
   systemd.user.sessionVariables = {
