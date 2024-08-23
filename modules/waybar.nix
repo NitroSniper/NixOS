@@ -131,8 +131,6 @@
             ];
           };
           states = {
-            full = 100;
-            discharging = 90;
             critical = 15;
           };
         };
