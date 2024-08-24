@@ -47,6 +47,7 @@
 
     # Nox
     inputs.nox.packages."${system}".default
+    vesktop
   ];
 
   systemd.user.sessionVariables = {
