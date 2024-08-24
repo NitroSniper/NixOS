@@ -19,5 +19,8 @@
     # Formatters
     nixfmt-rfc-style
     nixd
+
+    # Built Utils
+    just
   ];
 }
