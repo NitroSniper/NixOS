@@ -59,6 +59,22 @@
         "type": "github"
       }
     },
+    "neovim-ortin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724629332,
+        "narHash": "sha256-QOQmm3AwmqejqQ+YCaKxPAdrrfJvJSwjff9wK+wtWqA=",
+        "owner": "NitroSniper",
+        "repo": "neovim",
+        "rev": "f80efd82be3cf306aa2f366b068e4a02c15b4094",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NitroSniper",
+        "repo": "neovim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1723637854,
@@ -101,6 +117,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "neovim-ortin": "neovim-ortin",
         "nixpkgs": "nixpkgs",
         "nox": "nox"
       }

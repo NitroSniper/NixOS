@@ -15,12 +15,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Neovim config not managed via nix for portability
+    neovim-ortin = {
+      url = "github:NitroSniper/neovim";
+      flake = false;
+    };
   };
 
   outputs =
     { self, nixpkgs, ... }@inputs:
     {
-      nixpkgs.overlays = [ (final: prev: { nox = inputs.nox.packages.${final.system}.default; }) ];
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {
