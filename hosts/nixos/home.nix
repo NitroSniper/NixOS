@@ -34,6 +34,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [ (final: prev: { nox = inputs.nox.packages.${final.system}.default; }) ];
   home.packages = with pkgs; [
     foliate
     obs-studio
