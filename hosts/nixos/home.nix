@@ -34,21 +34,17 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config.allowUnfree = true;
-  home.packages =
-    (with pkgs; [
-      foliate
-      obs-studio
-      ticktick
+  home.packages = with pkgs; [
+    foliate
+    obs-studio
+    ticktick
 
-      # Wayland Clipboard
-      wl-clipboard
+    # Wayland Clipboard
+    wl-clipboard
 
-      distrobox
-    ])
-    ++ [
-      # Nox
-      inputs.nox.packages.${pkgs.system}.default
-    ];
+    distrobox
+    nox
+  ];
 
   systemd.user.sessionVariables = {
     NIXOS_OZONE_WL = "1";

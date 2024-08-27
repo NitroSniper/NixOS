@@ -14,11 +14,13 @@
       url = "github:NitroSniper/nox";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs =
     { self, nixpkgs, ... }@inputs:
     {
+      nixpkgs.overlays = [ (final: prev: { nox = inputs.nox.packages.${final.system}.default; }) ];
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {
