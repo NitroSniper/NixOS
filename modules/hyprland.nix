@@ -184,7 +184,7 @@
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
-        ", switch:Lid Switch, exec, 11111B"
+        ", switch:Lid Switch, exec, hyprlock"
       ];
 
       bind = [
