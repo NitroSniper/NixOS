@@ -349,7 +349,16 @@
       @define-color   network     #212937;
 
       window#waybar {
-          background: @bar-bg;
+          background: @main-bg;
+      }
+
+      tooltip {
+          background: @main-bg;
+          color: @main-fg;
+          border: solid;
+          border-radius: 7px;
+          border-width: 1px;
+          border-color: @nix;
       }
 
       #custom-OS {
