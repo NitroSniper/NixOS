@@ -59,7 +59,7 @@
             mode-mon-col = 3;
             on-click-right = "mode";
           };
-          format = "󱨴 {:%m-%d}";
+          format = "󱨴 {:%d-%m}";
           max-length = 8;
           min-length = 8;
           tooltip-format = "<tt>{calendar}</tt>";
@@ -75,30 +75,6 @@
           interval = 5;
           max-length = 7;
           min-length = 7;
-          tooltip = false;
-        };
-        "custom/DToBG-L-Arrow" = {
-          format = "";
-          tooltip = false;
-        };
-        "custom/DToBG-R-Arrow" = {
-          format = "";
-          tooltip = false;
-        };
-        "custom/DToL-L-Arrow" = {
-          format = "";
-          tooltip = false;
-        };
-        "custom/DToL-R-Arrow" = {
-          format = "";
-          tooltip = false;
-        };
-        "custom/LToD-L-Arrow" = {
-          format = "";
-          tooltip = false;
-        };
-        "custom/LToD-R-Arrow" = {
-          format = "";
           tooltip = false;
         };
         "custom/OS" = {
@@ -252,19 +228,6 @@
           "custom/left-6"
           "temperature"
         ];
-        network = {
-          format-disconnect = "{icon}  saldkfj {essid}";
-          format-icons = [
-            "󰤯 "
-            "󰤟 "
-            "󰤢 "
-            "󰤥 "
-            "󰤨 "
-          ];
-          format-wifi = "{icon} {essid}";
-          tooltip = true;
-          tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}\n{ipaddr}";
-        };
         "network#name" = {
           format-disconnected = "󰞃 N/A";
           format-icons = [
@@ -287,7 +250,7 @@
           max-length = 8;
           min-length = 8;
           tooltip = true;
-          tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}\n{ipaddr}";
+          tooltip-format-wifi = " {bandwidthUpBytes}\n {bandwidthDownBytes}";
         };
         position = "top";
         pulseaudio = {
@@ -450,9 +413,6 @@
           background: @main-bg;
       }
 
-
-
-
       #pulseaudio {
           color: @main-fg;
           background: @network;
@@ -516,11 +476,6 @@
           text-shadow: 3px 0px 2px @shadow;
       }
 
-
-
-
-
-
       #custom-left-9,
       #custom-left-8,
       #custom-left-7,
@@ -539,6 +494,20 @@
       #custom-left-1,
       #custom-right-1 {
           font-size: 16pt;
+      }
+
+      @keyframes blink {
+          to {
+              color: #f53c3c;
+          }
+      }
+
+      #battery.critical:not(.charging) {
+          animation-name: blink;
+          animation-duration: 0.5s;
+          animation-timing-function: steps(12);
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
       }
     '';
   };
