@@ -1,8 +1,7 @@
-{ pkgs, lib, ... }:
+{ ... }:
 {
   programs.kitty = {
     enable = true;
-    package = pkgs.kitty;
     environment = {
       "EDITOR" = "nvim";
     };
@@ -11,5 +10,9 @@
       size = 11;
     };
     theme = "Glacier";
+
+    settings = {
+      confirm_os_window_close = 0;
+    };
   };
 }

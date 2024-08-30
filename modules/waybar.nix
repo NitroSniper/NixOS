@@ -5,115 +5,24 @@
     # systemd.enable = true;
     settings = {
       mainBar = {
-        layer = "top";
-        position = "top";
-        modules-left = [
-          "custom/OS"
-          "custom/DToL-R-Arrow"
-          "hyprland/workspaces"
-          "custom/LToD-R-Arrow"
-          "network"
-          "custom/DToBG-R-Arrow"
-        ];
-        modules-center = [
-          "custom/DToBG-L-Arrow"
-          "clock"
-          "custom/DToBG-R-Arrow"
-        ];
-        modules-right = [
-          "custom/DToBG-L-Arrow"
-          "pulseaudio"
-          "custom/LToD-L-Arrow"
-          "memory"
-          "custom/DToL-L-Arrow"
-          "temperature"
-          "custom/LToD-L-Arrow"
-          "battery"
-          "custom/DToL-L-Arrow"
-          "user"
-        ];
-        "hyprland/workspaces" = {
-          format = "{icon}";
-          format-icons = {
-            default = "󰋙";
-            active = "";
-          };
-        };
-        "wlr/taskbar" = {
-          format = "{icon}";
-          icon-size = 16;
-          icon-theme = "Numix-Circle";
-          tooltip = false;
-          tooltip-format = "{title}";
-          on-click = "activate";
-          on-click-middle = "close";
-        };
-        user = {
-          format = "{user}";
-          interval = 60;
-        };
-        pulseaudio = {
-          tooltip = false;
-          scroll-step = 5;
-          format = "{icon}  {volume}%";
-          format-icons = {
-            default = [
-              "󰕿"
-              "󰖀"
-              "󰕾"
-            ];
-          };
-          format-muted = "󰝟 ";
-          format-bluetooth = "󰂯 {volume}%";
-          on-click = "pavucontrol";
-        };
-        clock = {
-          tooltip = true;
-          format = "{:%R %A %d}";
-          tooltip-format = "{:%R %a %d/%m/%y}";
-        };
-        memory = {
-          interval = 30;
-          format = "󰍛 {used:0.1f}G";
-        };
-        network = {
-          tooltip = true;
-          format-wifi = "{icon} {essid}";
-          format-disconnect = "{icon}  saldkfj {essid}";
-          format-icons = [
-            "󰤯 "
-            "󰤟 "
-            "󰤢 "
-            "󰤥 "
-            "󰤨 "
-          ];
-          tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}\n{ipaddr}";
-        };
         backlight = {
-          tooltip = false;
-          scroll-step = 5;
           device = "intel_backlight";
           format = "{icon} {}%";
-          format-icons = {
-            default = [
-              "󰃞"
-              "󰃟"
-              "󰃠"
-            ];
-          };
-        };
-        temperature = {
-          thermal-zone = 1;
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+          scroll-step = 5;
           tooltip = false;
-          interval = 10;
-          format = " {temperatureC}°C";
-        };
-        tray = {
-          spacing = 5;
         };
         battery = {
-          interval = 5;
-          tooltip = false;
           format = "{icon} {capacity}%";
           format-charging = "󱐋 {capacity}%";
           format-full = "󱟢 {capacity}%";
@@ -130,16 +39,46 @@
               "󰂂"
             ];
           };
+          interval = 5;
           states = {
             critical = 15;
           };
-        };
-        "custom/DToL-R-Arrow" = {
-          format = "";
           tooltip = false;
         };
-        "custom/LToD-R-Arrow" = {
-          format = "";
+        "clock#date" = {
+          actions = {
+            on-click-right = "mode";
+          };
+          calendar = {
+            format = {
+              months = "<span color='#f5e0dc'><b>{}</b></span>";
+              today = "<span color='#f38ba8'><b>{}</b></span>";
+              weekdays = "<span color='#f9e2af'><b>{}</b></span>";
+            };
+            mode = "month";
+            mode-mon-col = 3;
+            on-click-right = "mode";
+          };
+          format = "󱨴 {:%m-%d}";
+          max-length = 8;
+          min-length = 8;
+          tooltip-format = "<tt>{calendar}</tt>";
+        };
+        "clock#time" = {
+          format = "󱑂 {:%H:%M}";
+          max-length = 8;
+          min-length = 8;
+          tooltip = false;
+        };
+        cpu = {
+          format = "󰻠 {usage}%";
+          interval = 5;
+          max-length = 7;
+          min-length = 7;
+          tooltip = false;
+        };
+        "custom/DToBG-L-Arrow" = {
+          format = "";
           tooltip = false;
         };
         "custom/DToBG-R-Arrow" = {
@@ -150,87 +89,447 @@
           format = "";
           tooltip = false;
         };
+        "custom/DToL-R-Arrow" = {
+          format = "";
+          tooltip = false;
+        };
         "custom/LToD-L-Arrow" = {
           format = "";
           tooltip = false;
         };
-        "custom/DToBG-L-Arrow" = {
-          format = "";
+        "custom/LToD-R-Arrow" = {
+          format = "";
           tooltip = false;
         };
         "custom/OS" = {
           format = " ";
           tooltip = false;
         };
+        "custom/left-1" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-2" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-3" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-4" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-5" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-6" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-7" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-8" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/left-9" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/leftin-1" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/leftin-2" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/pad" = {
+          format = " ";
+          tooltip = false;
+        };
+        "custom/right-1" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/right-2" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/right-3" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/right-4" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/right-5" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/rightin-1" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/ws" = {
+          format = "  ";
+          tooltip = false;
+        };
+        "hyprland/window" = {
+          format = "{}";
+          max-length = 33;
+          min-length = 5;
+          rewrite = {
+            "" = "<span foreground='#cba6f7'></span> Nitro 󰅂 Hyprland";
+            Discord = "<span foreground='#89b4fa'></span>  Discord";
+            "Vivaldi - Vivaldi" = "<span foreground='#f38ba8'>󰈹</span> Vivaldi";
+            "nitro@nixos: ~" = " Terminal";
+            "nitro@nixos:(.*)" = "$1";
+          };
+          separate-outputs = true;
+        };
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            active = "";
+            default = "󰋙";
+          };
+        };
+        layer = "top";
+        memory = {
+          format = "󰍛 {percentage}%";
+          format-c = "󰀪 {percentage}%";
+          interval = 20;
+          max-length = 7;
+          min-length = 7;
+          states = {
+            threshold = 90;
+          };
+          tooltip = true;
+          tooltip-format = "{used:0.1f}GB / {total:0.1f}GB";
+        };
+        modules-center = [
+          "custom/left-4"
+          "network#speed"
+          "custom/left-3"
+          "memory"
+          "custom/left-2"
+          "clock#time"
+          "custom/leftin-1"
+          "custom/left-1"
+          "custom/OS"
+          "custom/right-1"
+          "custom/rightin-1"
+          "clock#date"
+          "custom/right-2"
+          "cpu"
+          "custom/right-3"
+          "network#name"
+          "custom/right-4"
+        ];
+        modules-left = [
+          "custom/ws"
+          "custom/left-5"
+          "hyprland/workspaces"
+          "custom/right-5"
+          "custom/pad"
+          "hyprland/window"
+        ];
+        modules-right = [
+          "custom/left-9"
+          "pulseaudio"
+          "custom/left-8"
+          "backlight"
+          "custom/left-7"
+          "battery"
+          "custom/leftin-2"
+          "custom/left-6"
+          "temperature"
+        ];
+        network = {
+          format-disconnect = "{icon}  saldkfj {essid}";
+          format-icons = [
+            "󰤯 "
+            "󰤟 "
+            "󰤢 "
+            "󰤥 "
+            "󰤨 "
+          ];
+          format-wifi = "{icon} {essid}";
+          tooltip = true;
+          tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}\n{ipaddr}";
+        };
+        "network#name" = {
+          format-disconnected = "󰞃 N/A";
+          format-icons = [
+            "󰢿"
+            "󰢼"
+            "󰢽"
+            "󰢾"
+          ];
+          format-wifi = " {icon} Wifi";
+          interval = 5;
+          max-length = 8;
+          min-length = 8;
+          tooltip = true;
+          tooltip-format-wifi = "{essid} ({signalStrength}%)\n{ipaddr}";
+        };
+        "network#speed" = {
+          format-disconnected = "0 B/s";
+          format-wifi = "{bandwidthTotalBytes}";
+          interval = 5;
+          max-length = 8;
+          min-length = 8;
+          tooltip = true;
+          tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}\n{ipaddr}";
+        };
+        position = "top";
+        pulseaudio = {
+          format = "{icon}  {volume}%";
+          format-bluetooth = "󰂯 {volume}%";
+          format-icons = {
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
+          };
+          format-muted = "󰝟 ";
+          on-click = "pavucontrol";
+          scroll-step = 5;
+          tooltip = false;
+        };
+        reload_style_on_change = true;
+        temperature = {
+          format = " {temperatureC}°C";
+          interval = 10;
+          thermal-zone = 1;
+          tooltip = false;
+        };
+        tray = {
+          spacing = 5;
+        };
+        user = {
+          format = "{user}";
+          interval = 60;
+        };
+        "wlr/taskbar" = {
+          format = "{icon}";
+          icon-size = 16;
+          icon-theme = "Numix-Circle";
+          on-click = "activate";
+          on-click-middle = "close";
+          tooltip = false;
+          tooltip-format = "{title}";
+        };
       };
     };
     style = ''
-
       * {
           background: none;
-          /* background-color: black; */
-          color: white;
-          font-family: "Roboto Mono Medium";
+          font-family: "SpaceMono Nerd Font";
+          font-weight: bold;
+          font-size: 14px;
+          min-height: 15px;
+      }
+      @define-color main-bg #11111b;
+      @define-color main-fg #F8E3CA;
 
-          font-size: 1rem;
-          padding-top: 0.2rem;
-          min-height: 0;
-      }
-      #workspaces, #battery, #memory {
-          background: #111111;
+      @define-color   nix         #7EB8E1;
+      @define-color   nix-alt     #5277C3;
+      @define-color   shadow      rgba(0, 0, 0, 1);
+      @define-color   clock       #405970;
+      @define-color   hardware    #304154;
+      @define-color   network     #212937;
+
+      window#waybar {
+          background: @bar-bg;
       }
 
-      #clock, #network, #custom-OS, #user, #temperature, #pulseaudio {
-          background: black;
-      }
       #custom-OS {
-          font-size: 1.4rem;
-          color: #5277c3;
+          text-shadow: none;
+          font-size: 16pt;
+          color: @nix-alt;
+          padding-left: 4px;
+          background: @nix;
+          text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+      }
+
+      #workspaces button {
+          box-shadow: none;
+          text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+          font-size: 16pt;
+          padding: 0 8px;
+          color: white;
+      }
+
+      #workspaces button:hover {
+          background: @clock;
+          color: @nix;
+      }
+
+      #custom-ws {
+          background: @main-bg;
+          color: @main-fg;
+      }
+
+      #workspaces {
+          background: @network;
+      }
+
+      #custom-left-5,
+      #custom-right-5 {
+          background: @main-bg;
+          color: @network;
+      }
+
+      #window {
+          color: @main-fg;
       }
 
 
-      tooltip {
-        background: rgba(43, 48, 59, 0.5);
-        border: 1px solid rgba(100, 114, 125, 0.5);
+      #custom-left-1,
+      #custom-right-1 {
+          color: @nix;
+          background: @main-bg;
       }
 
-      #custom-DToBG-R-Arrow,
-      #custom-DToBG-L-Arrow {
-      	color: black;
-          font-size: 1.5rem;
-      }
-      #workspaces button.focused {
-          background: #64727D;
-          border: 10px solid green;
+      #custom-leftin-1,
+      #custom-rightin-1 {
+          color: @clock;
       }
 
-      #custom-LToD-R-Arrow,
-      #custom-LToD-L-Arrow {
-      	color: #111111;
-          background: black;
-          font-size: 1.5rem;
+      #clock {
+          background: @clock;
+          color: @main-fg;
+          text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
       }
 
-      #custom-DToL-R-Arrow,
-      #custom-DToL-L-Arrow {
-      	color: black;
-          background: #111111;
-          font-size: 1.5rem;
+      #custom-left-2,
+      #custom-right-2 {
+          color: @clock;
+          background: @hardware;
       }
 
-      @keyframes blink {
-          to {
-              color: #f53c3c;
-          }
+
+      #cpu,
+      #memory {
+          color: @main-fg;
+          background: @hardware;
       }
 
-          
-      #battery.critical:not(.charging) {
-          animation-name: blink;
-          animation-duration: 0.5s;
-          animation-timing-function: steps(12);
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+      #custom-left-3,
+      #custom-right-3 {
+          color: @hardware;
+          background: @network;
+      }
+
+      #network {
+          color: @main-fg;
+          background: @network;
+      }
+
+      #custom-left-4,
+      #custom-right-4 {
+          color: @network;
+          background: @main-bg;
+      }
+
+
+
+
+      #pulseaudio {
+          color: @main-fg;
+          background: @network;
+      }
+      #custom-left-9 {
+          color: @network;
+      }
+
+      #backlight {
+          color: @main-fg;
+          background: @hardware;
+      }
+      #custom-left-8 {
+          color: @hardware;
+          background: @network;
+      }
+
+      #battery {
+          color: @main-fg;
+          background: @clock;
+      }
+      #custom-left-7 {
+          background: @hardware;
+          color: @clock;
+      }
+
+      #temperature {
+          color: @main-fg;
+          background: @nix-alt;
+      }
+      #custom-left-6 {
+          color: @nix-alt;
+      }
+
+      #custom-leftin-2 {
+          color: @clock;
+      }
+
+
+      #custom-left-9,
+      #custom-left-8,
+      #custom-left-7,
+      #custom-left-6,
+      #custom-left-5,
+      #custom-left-4,
+      #custom-left-3,
+      #custom-left-2,
+      #custom-left-1 {
+          text-shadow: none;
+          padding-left: 3px;
+          text-shadow: -3px 0px 2px @shadow;
+      }
+
+      #custom-right-5,
+      #custom-right-4,
+      #custom-right-3,
+      #custom-right-2,
+      #custom-right-1 {
+          text-shadow: none;
+          padding-right: 3px;
+          text-shadow: 3px 0px 2px @shadow;
+      }
+
+
+
+
+
+
+      #custom-left-9,
+      #custom-left-8,
+      #custom-left-7,
+      #custom-leftin-2,
+      #custom-left-6,
+      #custom-left-5,
+      #custom-right-5,
+      #custom-left-4,
+      #custom-right-4,
+      #custom-left-3,
+      #custom-right-3,
+      #custom-left-2,
+      #custom-right-2,
+      #custom-leftin-1,
+      #custom-rightin-1,
+      #custom-left-1,
+      #custom-right-1 {
+          font-size: 16pt;
       }
     '';
   };

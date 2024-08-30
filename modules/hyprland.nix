@@ -184,14 +184,14 @@
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
-        ", switch:Lid Switch, exec, hyprlock"
+        ", switch:Lid Switch, exec, 11111B"
       ];
 
       bind = [
         # Performance
         "$mod, F1, exec, hyprland-gamemode"
         "$mod, F2, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
-        "$mod, F3, exec, ${pkgs.hyprpicker}/bin/hyprpicker"
+        "$mod, F3, exec, ${pkgs.hyprpicker}/bin/hyprpicker --autocopy"
 
         # Utility
         "$mod SHIFT, Q, exec, hyprlock"
