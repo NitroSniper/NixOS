@@ -254,7 +254,7 @@
         };
         position = "top";
         pulseaudio = {
-          format = "{icon}  {volume}%";
+          format = "{icon} {volume}%";
           format-bluetooth = "󰂯 {volume}%";
           format-icons = {
             default = [
