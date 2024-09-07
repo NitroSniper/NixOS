@@ -163,8 +163,9 @@
           min-length = 5;
           rewrite = {
             "" = "<span foreground='#cba6f7'></span> Nitro 󰅂 Hyprland";
-            Discord = "<span foreground='#89b4fa'></span>  Discord";
-            "Vivaldi - Vivaldi" = "<span foreground='#f38ba8'>󰈹</span> Vivaldi";
+            "(.*) - Discord" = "<span foreground='#89b4fa'></span> $1";
+            "(.*) - Vivaldi" = "<span foreground='#f38ba8'>󰈹</span> $1";
+            kitty = " Terminal";
             "nitro@nixos: ~" = " Terminal";
             "nitro@nixos:(.*)" = "$1";
           };
@@ -268,7 +269,6 @@
           scroll-step = 5;
           tooltip = false;
         };
-        reload_style_on_change = true;
         temperature = {
           format = " {temperatureC}°C";
           interval = 10;
