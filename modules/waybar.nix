@@ -2,7 +2,6 @@
 {
   programs.waybar = {
     enable = true;
-    # systemd.enable = true;
     settings = {
       mainBar = {
         backlight = {
@@ -163,7 +162,7 @@
           min-length = 5;
           rewrite = {
             "" = "<span foreground='#cba6f7'></span> Nitro 󰅂 Hyprland";
-            "(.*) - Discord" = "<span foreground='#89b4fa'></span> $1";
+            "(.*) - Discord" = "<span foreground='#89b4fa'></span>  $1";
             "(.*) - Vivaldi" = "<span foreground='#f38ba8'>󰈹</span> $1";
             kitty = " Terminal";
             "nitro@nixos: ~" = " Terminal";
