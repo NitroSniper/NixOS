@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   home.packages = [ (import ./hyprland-gamemode.nix { inherit pkgs; }) ];
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaDark;
