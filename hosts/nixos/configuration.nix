@@ -129,7 +129,6 @@
       default_session = initial_session;
     };
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   home-manager = {
     extraSpecialArgs = {
