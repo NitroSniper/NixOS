@@ -236,7 +236,7 @@
             "󰢽"
             "󰢾"
           ];
-          format-wifi = " {icon} Wifi";
+          format-wifi = " {icon} {essid}";
           interval = 5;
           max-length = 8;
           min-length = 8;

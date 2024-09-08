@@ -62,6 +62,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.scanRandMacAddress = false;
   # Prevents NM to pause the boot till it has connection to wifi
   systemd.services.NetworkManager-wait-online.enable = false;
 
