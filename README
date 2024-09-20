@@ -1,2 +1,2 @@
 The command to rebuild is:
-nixos-rebuild switch --flake /etc/nixos#default
+nixos-rebuild
