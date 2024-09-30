@@ -192,8 +192,8 @@
       bind = [
         # Performance
         "$mod, F1, exec, hyprland-gamemode"
-        "$mod, F1, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
-        "$mod, F2, exec, ${pkgs.hyprpicker}/bin/hyprpicker --autocopy"
+        "$mod, F2, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
+        "$mod, F3, exec, ${pkgs.hyprpicker}/bin/hyprpicker --autocopy"
         "$mod, F4, exec, hyprland-maxtile"
 
         # Utility
