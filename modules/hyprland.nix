@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  home.packages = [ (import ./hyprland-gamemode.nix { inherit pkgs; }) ];
+  home.packages = [
+    (import ./hyprland-gamemode.nix { inherit pkgs; })
+    (import ./hyprland-maxtile.nix { inherit pkgs; })
+  ];
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaDark;
     name = "catppuccin-mocha-dark-cursors";
@@ -189,8 +192,9 @@
       bind = [
         # Performance
         "$mod, F1, exec, hyprland-gamemode"
-        "$mod, F2, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
-        "$mod, F3, exec, ${pkgs.hyprpicker}/bin/hyprpicker --autocopy"
+        "$mod, F1, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
+        "$mod, F2, exec, ${pkgs.hyprpicker}/bin/hyprpicker --autocopy"
+        "$mod, F4, exec, hyprland-maxtile"
 
         # Utility
         "$mod SHIFT, Q, exec, hyprlock"
