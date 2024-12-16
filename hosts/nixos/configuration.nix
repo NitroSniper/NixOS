@@ -177,7 +177,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  fonts.packages = with pkgs; [ nerd-fonts.hack ];
+  fonts.packages = with pkgs.nerd-fonts; [
+    hack
+    space-mono
+  ];
 
   # Storage Optimisations
   nix.optimise = {
