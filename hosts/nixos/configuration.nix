@@ -180,6 +180,7 @@
   fonts.packages = with pkgs.nerd-fonts; [
     hack
     space-mono
+    jetbrains-mono
   ];
 
   # Storage Optimisations
