@@ -38,7 +38,6 @@
   home.packages = with pkgs; [
     foliate
     obs-studio
-    ticktick
 
     # Wayland Clipboard
     wl-clipboard
