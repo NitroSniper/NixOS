@@ -95,11 +95,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1734341797,
-        "narHash": "sha256-4d6ibH6CYjEpaat4FV8vB0cgXHPGORN5apL5zcMFE+o=",
+        "lastModified": 1734350645,
+        "narHash": "sha256-GRUbKofewB/+oZgGmAxbn9kTvNPsvj0JcTUgcyqYgik=",
         "owner": "NitroSniper",
         "repo": "nox",
-        "rev": "8933e17a141037e8a60f477f6e21f0de4a881340",
+        "rev": "4df8ed540e681549b5c644d7235153ec1dc4aba6",
         "type": "github"
       },
       "original": {
